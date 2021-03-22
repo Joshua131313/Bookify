@@ -8,7 +8,7 @@ import Body from './components/Body/Body'
 import ScrollToTop from "./components/Scrolltotop";
 import ContextAppProvider from "./ContextAPI";
 
-function App() {
+function App() { 
   const [update, setUpdate]=useState(0)
   const [user, setUser]=useState('')
   const [name, setName]=useState('')
