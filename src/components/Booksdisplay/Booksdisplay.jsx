@@ -19,7 +19,7 @@ function Booksdisplay(props){
   const {loader} = useContext(ContextApp)
   const [nobooksmsg, setNobooksmsg] = useState(false)
   const { favorites, setFavorites, keyword, setKeyword, books, saved, editable, hidelike, userimgbool, banner, allbooks, carousel}=props
-  const pattern = new RegExp('\\b' + keyword, 'i')
+  const pattern = new RegExp('\\b' + keyword.replace(/[^a-zA-Z0-9 ]/g, ""), 'i')
   const {favoritesbool, setFavoritesbool, setMorefilters} = useContext(ContextApp)
   const [gridview, setGridview] = useState(false)
   const [limit, setLimit] = useState(40)
